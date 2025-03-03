@@ -2,10 +2,7 @@ name: My First Workflow
 
 
 on:
-  push
-  # schedule:
-  #   - cron: "*/1 * * * *" 
-  # workflow_dispatch:
+  workflow_dispatch:
   #   inputs:
   #     loglevel:
   #       description: 'log level'
