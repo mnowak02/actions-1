@@ -11,6 +11,10 @@ on:
         options:
           - info
           - warning
+      environment:
+        description: 'env'
+        type: environment
+        required: true
 
 jobs:
     first_job:
