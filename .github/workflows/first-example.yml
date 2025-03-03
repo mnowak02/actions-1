@@ -1,7 +1,16 @@
 name: My First Workflow
 
 on: 
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      loglevel:
+        description: 'log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
 
 jobs:
     first_job:
