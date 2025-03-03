@@ -1,20 +1,22 @@
 name: My First Workflow
 
-on: 
-  workflow_dispatch:
-    inputs:
-      loglevel:
-        description: 'log level'
-        required: true
-        default: 'warning'
-        type: choice
-        options:
-          - info
-          - warning
-      environment:
-        description: 'env'
-        type: environment
-        required: true
+on:
+  schedule:
+    - cron: "*/1 * * * *" 
+  # workflow_dispatch:
+  #   inputs:
+  #     loglevel:
+  #       description: 'log level'
+  #       required: true
+  #       default: 'warning'
+  #       type: choice
+  #       options:
+  #         - info
+  #         - warning
+  #     environment:
+  #       description: 'env'
+  #       type: environment
+  #       required: true
 
 jobs:
     first_job:
